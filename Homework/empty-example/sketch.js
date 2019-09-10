@@ -1,5 +1,5 @@
 var eyeSize = 20;
-var mouthX = 70;
+var topCircle = 100;
 var canvasSize = 500;
 var midButton = 15;
 var midScreen = 225;
@@ -15,7 +15,7 @@ function draw() {
   // put drawing code here
 
   fill("white");
-    ellipse(midScreen,100,100,100);// top of snowman
+    ellipse(midScreen,100,topCircle,100);// top of snowman
 
 fill("white");
 ellipse(midScreen,midScreen,150,150);//middle of snowman
