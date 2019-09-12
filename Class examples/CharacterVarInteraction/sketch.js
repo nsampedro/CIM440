@@ -1,7 +1,8 @@
 var pointX = 0;// has no value yet until you create the canvas
 var pointY = 0;
-
 var faceColor = "purple";
+
+var faceButton;
 
 function setup() {
   // put setup code here
@@ -9,6 +10,15 @@ function setup() {
   pointX = width/2;
   pointY = height/2;
   console.log("pointX " + pointX + " pointY " + pointY);
+
+faceButton = createButton("Click to turn orange");
+faceButton.position(20,20);
+faceButton.mousePressed(function(){
+  // your action goes in here
+  //the button mousepressed function is tied to the general mousepressed function
+  faceColor = "orange";
+
+});
 }
 
 function draw() {
@@ -34,13 +44,13 @@ arc(pointX,pointY + 10,50,50,0,PI);
 
 
 function mousePressed(){// when you press the mouse it turns red
-  faceColor = "red";
+  //faceColor = "red";
 }
 
 function mouseReleased(){//when you let go it goes back to original color
-faceColor = "purple";
+  //faceColor = "purple";
 }
 
-function keyPressed(){
+function keyPressed(){// when you press the key on the keyboard it changes color
   faceColor = "green";
 }
