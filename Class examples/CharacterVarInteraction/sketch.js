@@ -23,11 +23,26 @@ faceButton.mousePressed(function(){
 
 function draw() {
   // put drawing code here
-  background("blue");//floods the background so it doesnt have that repeating effect
+  //floods the background so it doesnt have that repeating effect
+
+
+// i want to change the background based, split screen vertically
+
+if(mouseX < width/2){
+  console.log("left hand side");
+  background("white");
+}
+
+if(mouseX > width/2){
+  console.log("right hand side");
+  background("green");
+}
+
+
   pointX = mouseX;
   pointY = mouseY;
 
-  console.log("pointX " + pointX + " pointY " + pointY);
+  //console.log("pointX " + pointX + " pointY " + pointY);
 fill(faceColor);
   rect(pointX - 100,pointY-100,200,200);
 
@@ -52,5 +67,23 @@ function mouseReleased(){//when you let go it goes back to original color
 }
 
 function keyPressed(){// when you press the key on the keyboard it changes color
-  faceColor = "green";
+
+  console.log("key " + key);
+  console.log("keyCode " + keyCode);
+
+  //if statement is true, then execute code inside{}
+  // == if oneside equals the other
+  // if you press b, then key becomes "b"== "b" which is true
+  //key returns a character
+if(key == "b"){
+      faceColor = "blue";
+}
+
+// if you press r, then keyCode becomes 82, 82 == 82 which is true
+//keyCode returns a number
+if(keyCode == 82){
+  faceColor = "red";
+}
+
+
 }
