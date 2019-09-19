@@ -38,6 +38,11 @@ if(mouseX > width/2){
   background("green");
 }
 
+if(mouseX==width/2){
+  console.log("center");
+  background("yellow");
+}
+
 
   pointX = mouseX;
   pointY = mouseY;
