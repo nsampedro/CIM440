@@ -1,6 +1,6 @@
 let dots=[];
 let pressed = false;
-let noOfDots = 50;
+let noOfDots = 300;
 
 
 function setup() {
@@ -88,5 +88,5 @@ class Dot{
         //if(Math.abs(mouseX-this.x) < this.CurrStroke && Math.abs(mouseY-this.y) < this.CurrStroke) this.reset();
     }
 
-	
+
 }
