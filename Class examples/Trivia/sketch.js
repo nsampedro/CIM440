@@ -1,6 +1,6 @@
-var questions = ["Is Iceland always covered in ice?","What ocean lies east of the US?"];
-var options = ["1) True 2) False","1) Pacific 2) Eastern 3) Indian 4) Atlantic"];
-var answers = [1,3];
+var questions = ["Is Iceland always covered in ice?","What ocean lies east of the US?","Where is Spain?"];
+var options = ["1) True 2) False","1) Pacific 2) Eastern 3) Indian 4) Atlantic","1) South America 2) North America 3) Europe 4) Africa"];
+var answers = [1,3,2];
 
 var currentOption = -1; //refers to what button the user has pressed
 

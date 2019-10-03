@@ -1,6 +1,6 @@
 let dots=[];
 let pressed = false;
-let noOfDots = 300;
+let noOfDots = 1ß00;
 
 
 function setup() {
