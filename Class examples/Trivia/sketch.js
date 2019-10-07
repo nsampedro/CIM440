@@ -10,6 +10,12 @@ var currentQuestion = 0;
 
 var answerText = "";
 
+var showAnswer = false;
+
+var interval = 5000;
+var prevMillis= 0;
+
+
 function setup() {
   // put setup code here
   createCanvas(400,400);
@@ -51,8 +57,28 @@ function draw() {
 
 text(questions[currentQuestion], 20,100);
 text(options[currentQuestion], 20,150);
-text(answerText, 20,200);
 
+if(showAnswer == true){
+    text(answerText, 20,200);
+
+    //start our timer
+    if(millis() - prevMillis > interval){
+        prevMillis = millis();
+        showAnswer = false;
+    }
+
+}//end of showAnswer==true
+
+
+if(currentQuestion == 0){
+    // this will only work on html elements
+    buttons[2].hide();
+    buttons[3].hide();
+}
+if(currentQuestion == 1){
+    buttons[2].show();
+    buttons[3].show();
+}
 
 
 //if the current option is not equal to -1
@@ -71,11 +97,13 @@ if(currentOption != -1){
         }//setting array limit
     }else{
         console.log("Incorrect");
-        answerText = "Incorrect"
+        answerText = "Incorrect";
 
     }//check for correct or incorrect
 
     currentOption = -1;
+    showAnswer = true;
+    prevMillis = millis();
 
 }//end of currentOption != -1
 
