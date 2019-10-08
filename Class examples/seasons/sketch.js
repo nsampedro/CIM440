@@ -45,11 +45,8 @@ function draw() {
 
   }else{
     console.log("blank");
-    text("Make a selection",100,20);  
+    text("Make a selection",100,20);
   }
-
-
-
 
 
 }
