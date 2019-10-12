@@ -6,6 +6,12 @@ var bottomBall = "red"
 
 var ballButton
 
+var snowX = [];
+var snowY = [];
+var snowAmmount = 100;
+
+var snowButton
+
 function setup() {
   // put setup code here
   createCanvas(canvasSize,500);
@@ -15,6 +21,12 @@ ballButton = createButton("click to change color");
 ballButton.position(20,20);
 ballButton.mousePressed(function(){
   bottomBall="green";
+});
+
+snowButton = createButton("Click to make it snow!")
+snowButton.position(300,20);
+snowButton.mousePressed(function(){
+
 });
 
 
