@@ -19,8 +19,11 @@ var leafY =[];
 var leafAmmount = 100;
 var leafImage;
 
+var pumpkin;
+
 function preload(){
     leafImage = loadImage("leaf.jpg");
+    pumpkin = loadImage("pumpkin.jpg");
 }
 
 var snowButton
@@ -60,7 +63,7 @@ function setup() {
 ballButton = createButton("click to change color");
 ballButton.position(20,20);
 ballButton.mousePressed(function(){
-  bottomBall="green";
+  bottomBall="orange";
 });
 
 
@@ -74,6 +77,13 @@ function draw() {
   background(255);
   if(seasonType == "fall"){
       console.log("fall");
+
+      imageMode(CENTER);
+            image(pumpkin, midScreen,100,topCircle,100);// top of snowman
+
+            image(pumpkin,midScreen,midScreen,150,150);//middle of snowman
+
+            image(pumpkin,midScreen,400,200,200);//bottom of snowman
 
     for(var f = 0; f<leafAmmount; f++){
         if(leafY[f]<height-20){
@@ -97,18 +107,20 @@ function draw() {
             }
         }
 
+        fill("white");
+              ellipse(midScreen,100,topCircle,100);// top of snowman
+
+          fill("white");
+              ellipse(midScreen,midScreen,150,150);//middle of snowman
+
+          fill(bottomBall);
+              ellipse(midScreen,400,200,200);//bottom of snowman
+
+}else{
+    console.log("blank");
+    text("Pick a season!", 295,38);
 }
 
-
-
-  fill("white");
-        ellipse(midScreen,100,topCircle,100);// top of snowman
-
-    fill("white");
-        ellipse(midScreen,midScreen,150,150);//middle of snowman
-
-    fill(bottomBall);
-        ellipse(midScreen,400,200,200);//bottom of snowman
 
     fill("black");
         ellipse(245,85,eyeSize,eyeSize);
