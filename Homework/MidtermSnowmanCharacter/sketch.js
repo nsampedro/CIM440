@@ -1,3 +1,7 @@
+var seasonSelect;
+var seasonType = "";
+
+
 var eyeSize = 20;
 var topCircle = 100;
 var canvasSize = 500;
@@ -10,6 +14,11 @@ var snowX = [];
 var snowY = [];
 var snowAmmount = 100;
 
+var leafX =[];
+var leafY =[];
+var leafAmmount = 100;
+var leafImage;
+
 var snowButton
 
 function setup() {
@@ -17,17 +26,23 @@ function setup() {
   createCanvas(canvasSize,500);
   background(0,0,255);
 
+  seasonSelect = createSelect();
+  seasonSelect.position(380,25);
+  seasonSelect.option("");
+  seasonSelect.option("fall");
+  seasonSelect.option("winter");
+  seasonSelect.changed(function(){
+      seasonType = seasonSelect.value();
+  });
+
+
+
 ballButton = createButton("click to change color");
 ballButton.position(20,20);
 ballButton.mousePressed(function(){
   bottomBall="green";
 });
 
-snowButton = createButton("Click to make it snow!")
-snowButton.position(300,20);
-snowButton.mousePressed(function(){
-
-});
 
 
 
