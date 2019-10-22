@@ -6,7 +6,7 @@ var eyeSize = 20;
 var topCircle = 100;
 var canvasSize = 500;
 var midScreen = 225;
-var bottomBall = "red"
+var bottomBall = "white"
 
 var ballButton
 
@@ -60,7 +60,7 @@ function setup() {
 
 
 
-ballButton = createButton("click to change color");
+ballButton = createButton("click to change color for winter!");
 ballButton.position(20,20);
 ballButton.mousePressed(function(){
   bottomBall="orange";
