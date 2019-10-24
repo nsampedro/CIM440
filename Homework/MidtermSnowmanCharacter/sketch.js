@@ -7,6 +7,8 @@ var topCircle = 100;
 var canvasSize = 500;
 var midScreen = 225;
 var bottomBall = "white"
+var topBall = "white"
+var midBall = "white"
 
 var ballButton
 
@@ -31,6 +33,7 @@ var snowButton
 function setup() {
   // put setup code here
   createCanvas(canvasSize,500);
+
 
   seasonSelect = createSelect();
   seasonSelect.position(380,25);
@@ -63,7 +66,9 @@ function setup() {
 ballButton = createButton("click to change color for winter!");
 ballButton.position(20,20);
 ballButton.mousePressed(function(){
-  bottomBall="orange";
+  bottomBall= "cyan";
+  topBall = "cyan";
+  midBall = "cyan";
 });
 
 
@@ -75,6 +80,12 @@ ballButton.mousePressed(function(){
 function draw() {
   // put drawing code here
   background(255);
+
+
+
+
+
+
   if(seasonType == "fall"){
       console.log("fall");
 
@@ -107,10 +118,10 @@ function draw() {
             }
         }
 
-        fill("white");
+        fill(topBall);
               ellipse(midScreen,100,topCircle,100);// top of snowman
 
-          fill("white");
+          fill(midBall);
               ellipse(midScreen,midScreen,150,150);//middle of snowman
 
           fill(bottomBall);
@@ -134,10 +145,12 @@ function draw() {
         ellipse(225,230,15,15);//middle middle button
         ellipse(midScreen,270,15,15);//bottom button
 
-        strokeWeight(3)
+        strokeWeight(2)
         line(320,150,300,210);//right arm
         line(153,200,130,140);//left arm
 
+strokeWeight(1)
+text("Press W to return to white snowman after clicking the button during winter!", 350,200,90,90);
 
 
 }//end of drawing
@@ -150,10 +163,12 @@ function keyPressed(){
 
 if(key == "w"){
   bottomBall="white";
+  midBall = "white";
+  topBall = "white";
 }
 
-if(keyCode == 80){
-  bottomBall="purple";
-}
+// if(keyCode == 80){
+//   bottomBall="purple";
+// }
 
 }
