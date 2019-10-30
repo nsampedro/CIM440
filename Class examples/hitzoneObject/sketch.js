@@ -1,49 +1,88 @@
 var button1;
 var button2;
 
-function setup() {
-  // put setup code here
-  createCanvas(400,400);
+var soundFile;
+var cowVid;
 
-  button1 = new hitzoneObject(100,200,50,"red");
-  button2 = new hitzoneObject(200,200,50,"green");
+function preload() {
+ soundFile = loadSound("assets/CowMoo.mp3");
+ cowVid = createVideo("assets/cow.mp4");
+}
+
+function setup() {
+ // put setup code here
+ createCanvas(400, 400);
+
+ button1 = new hitzoneObject(100, 200, 50, "red", "Stop", loadImage("assets/stop.png"));
+ button2 = new hitzoneObject(200, 200, 50, "green", "Play", loadImage("assets/play.png"));
+
+ cowVid.hide();
+ //soundFile.play();
 }
 
 function draw() {
-  // put drawing code here
-  background(255);
+ //soundFile.play();
+ // put drawing code here
+ background(255);
 
-  button1.display();
-  button1.check();
-  console.log("button1 overlay " + button1.overlay);
-  button2.display();
-  button2.check();
+ button1.display();
+ button1.check();
+ console.log("button1 overlay " + button1.overlay);
+ button2.display();
+ button2.check();
 
 }
 
-class hitzoneObject{
+function mousePressed() {
+ if (button1.overlay == true) {
+  console.log(button1.label);
+  soundFile.stop();
+  cowVid.stop();
+  cowVid.hide();
+ }
+ if (button2.overlay == true) {
+  console.log(button2.label);
+  soundFile.stop();
+  soundFile.play();
+  cowVid.show();
+  cowVid.play();
+ }
+}
 
-    constructor(tempX, tempY, tempSize, tempColor){
-        this.X = tempX;
-        this.Y = tempY;
-        this.boxSize = tempSize;
-        this.boxColor = tempColor;
-    }
+class hitzoneObject {
 
-    display(){
-        fill(this.boxColor);
-        rect(this.X, this.Y, this.boxSize, this.boxSize);
-    }
+ constructor(tempX, tempY, tempSize, tempColor, tempLabel, tempImage) {
+  this.X = tempX;
+  this.Y = tempY;
+  this.boxSize = tempSize;
+  this.boxColor = tempColor;
+  this.overlay = false;
+  this.label = tempLabel;
+  this.image = tempImage;
+ }
 
-    check(){
-        if(mouseX > this.X && mouseX < (this.X + this.boxSize) && mouseY > this.Y && mouseY < (this.Y + this.boxSize)){
-            //console.log("over button " + this.boxColor);
-            this.overlay = true;
-        }else{
-            //console.log("off button " + this.boxColor);
-            this.overlay = false;
-        }
-    }
+ display() {
+  fill(this.boxColor);
+  text(this.label, this.X, this.Y - 20);
+  //rect(this.X, this.Y, this.boxSize, this.boxSize);
+  image(this.image, this.X, this.Y, this.boxSize, this.boxSize);
+
+  if (this.overlay == true) {
+   fill(127, 127);
+   rect(this.X, this.Y, this.boxSize, this.boxSize);
+  }
+
+ }
+
+ check() {
+  if (mouseX > this.X && mouseX < (this.X + this.boxSize) && mouseY > this.Y && mouseY < (this.Y + this.boxSize)) {
+   //console.log("over button " + this.boxColor);
+   this.overlay = true;
+  } else {
+   //console.log("off button " + this.boxColor);
+   this.overlay = false;
+  }
+ }
 
 
 
@@ -53,4 +92,4 @@ class hitzoneObject{
 
 
 
-}//end of hitzoneObject
+} //end of hitzoneObject
