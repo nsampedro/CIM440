@@ -46,6 +46,7 @@ function mousePressed() {
   soundFile.play();
   cowVid.show();
   cowVid.play();
+  cowVid.style("display", "inline")
  }
 }
 

@@ -12,6 +12,11 @@ function setup() {
  //.style("css property", "value")
  select("#container0").style("width", "400px");
  select("#container0").style("margin", "0 auto"); //center your container, margin: 0 auto, 0 refers to top and bottom spacing, the auto refers to left and right spacing. this will only work if you set a width
+
+ cnv.parent("container0");
+
+ select("body").style("background-color", "orange");
+
 }
 
 function draw() {
