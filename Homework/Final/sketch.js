@@ -13,6 +13,10 @@ const options = {
  style: "http://{s}.tile.osm.org/{z}/{x}/{y}.png"
 }
 
+var nigeria;
+var china;
+var borneo;
+
 
 // p5.js setup
 function setup() {
@@ -26,18 +30,42 @@ function setup() {
  myMap = mappa.tileMap(options);
  // Overlay the canvas over the tile map
  myMap.overlay(canvas);
+ //
+ // .addTo(myMap)
+ //  .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
+ //  .openPopup();
 
- fill(200, 100, 100);
-
+ //fill(200, 100, 100);
+ drawPoint();
  myMap.onChange(drawPoint);
+
 }
 
 function draw() {
 
 } //end of draw
+
+function mousePressed() {
+ if (dist(mouseX, mouseY, nigeria.x, nigeria.y) < 10) {
+  console.log("nigeria");
+  rect(nigeria.x, nigeria.y, 50, 50);
+  fill("black");
+  text("nigeria", nigeria.x, nigeria.y)
+ }
+}
+
 function drawPoint() {
  clear();
 
- const nigeria = myMap.latLngToPixel(11.396396, 5.076543);
+ nigeria = myMap.latLngToPixel(11.396396, 5.076543);
  ellipse(nigeria.x, nigeria.y, 20, 20);
+
+ china = myMap.latLngToPixel(44.891512, 134.866455);
+ ellipse(china.x, china.y, 20, 20);
+
+ borneo = myMap.latLngToPixel(0.147800, 114.272526);
+ ellipse(borneo.x, borneo.y, 20, 20);
+
+
+
 }
