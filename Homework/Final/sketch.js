@@ -57,14 +57,36 @@ function draw() {
 function mousePressed() {
  if (dist(mouseX, mouseY, nigeria.x, nigeria.y) < 10) {
   console.log("nigeria");
-  rect(nigeria.x, nigeria.y, 50, 50);
-  fill("black");
-  text("nigeria", nigeria.x, nigeria.y)
+  fill(0, 127);
+  rect(nigeria.x, nigeria.y, 200, 200);
+  fill("white");
+  text("Western Lowland Gorilla", nigeria.x, nigeria.y + 10, 200, 200);
+  text("The western lowland gorilla is the most numerous and widespread of all gorilla subspecies. The height is 4.5 to 5 feet and weigh around 400 pounds. It is considered to be crtically endangered and roam the forest habitat of eastern Africa", nigeria.x, nigeria.y + 30, 200, 200);
+
+ }
+ if (dist(mouseX, mouseY, china.x, china.y) < 10) {
+  console.log("china");
+  fill(0, 127);
+  rect(china.x, china.y, 210, 210);
+  fill("white");
+  text("Amur Leopard", china.x, china.y + 10, 200, 200);
+  text("The Amur Leopard is located in southeastern Russia close to the border of northern China. It is one of the eight subspecies of leopard and is adapted to a cool climate. The most recent noted population of the Amur Leopard is to be around 100. It is listed as critically endangered. More information can be found at the Wildcats Conservation alliance in regards to history and donations to keep the species around.", china.x, china.y + 30, 200, 200);
+
+ }
+ if (dist(mouseX, mouseY, borneo.x, borneo.y) < 10) {
+  console.log("borneo");
+  fill(0, 127);
+  rect(borneo.x, borneo.y, 225, 225);
+  fill("white");
+  text("Bornean Orangutan", borneo.x, borneo.y + 10, 200, 200);
+  text("The bornean orangutan is native to Bornea, an Island in southeast Asia. The Bornean orangutan population has said to have declined by more than 50%. It is considered to be critically endangered. The island has three subspecies, each located on different areas of the island. The Northwest Bornean orangutans are the most threatned with around a mere 1,500 individuals remaining. The Northeastern and Central Bornean orangutans have the bigger population, but their are only less than 100,000 total in the world today. ", borneo.x, borneo.y + 30, 200, 200);
+
  }
 }
 
 function drawPoint() {
  clear();
+ fill(0, 127);
 
  nigeria = myMap.latLngToPixel(11.396396, 5.076543);
  ellipse(nigeria.x, nigeria.y, 20, 20); //Western lowland gorilla
