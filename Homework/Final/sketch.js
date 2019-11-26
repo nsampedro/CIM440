@@ -60,8 +60,8 @@ function mousePressed() {
   fill(0, 127);
   rect(nigeria.x, nigeria.y, 200, 200);
   fill("white");
-  text("Western Lowland Gorilla", nigeria.x, nigeria.y + 10, 200, 200);
-  text("The western lowland gorilla is the most numerous and widespread of all gorilla subspecies. The height is 4.5 to 5 feet and weigh around 400 pounds. It is considered to be crtically endangered and roam the forest habitat of eastern Africa", nigeria.x, nigeria.y + 30, 200, 200);
+  text("Western Lowland Gorilla", nigeria.x + 10, nigeria.y + 10, 200, 200);
+  text("The western lowland gorilla is the most numerous and widespread of all gorilla subspecies. The height is 4.5 to 5 feet and weigh around 400 pounds. It is considered to be crtically endangered and roam the forest habitat of eastern Africa", nigeria.x + 10, nigeria.y + 30, 200, 200);
 
  }
  if (dist(mouseX, mouseY, china.x, china.y) < 10) {
@@ -69,17 +69,17 @@ function mousePressed() {
   fill(0, 127);
   rect(china.x, china.y, 210, 210);
   fill("white");
-  text("Amur Leopard", china.x, china.y + 10, 200, 200);
-  text("The Amur Leopard is located in southeastern Russia close to the border of northern China. It is one of the eight subspecies of leopard and is adapted to a cool climate. The most recent noted population of the Amur Leopard is to be around 100. It is listed as critically endangered. More information can be found at the Wildcats Conservation alliance in regards to history and donations to keep the species around.", china.x, china.y + 30, 200, 200);
+  text("Amur Leopard", china.x + 10, china.y + 10, 200, 200);
+  text("The Amur Leopard is located in southeastern Russia close to the border of northern China. It is one of the eight subspecies of leopard and is adapted to a cool climate. The most recent noted population of the Amur Leopard is to be around 100. It is listed as critically endangered. More information can be found at the Wildcats Conservation alliance in regards to history and donations to keep the species around.", china.x + 10, china.y + 30, 200, 200);
 
  }
  if (dist(mouseX, mouseY, borneo.x, borneo.y) < 10) {
   console.log("borneo");
   fill(0, 127);
-  rect(borneo.x, borneo.y, 225, 225);
+  rect(borneo.x, borneo.y, 245, 245);
   fill("white");
-  text("Bornean Orangutan", borneo.x, borneo.y + 10, 200, 200);
-  text("The bornean orangutan is native to Bornea, an Island in southeast Asia. The Bornean orangutan population has said to have declined by more than 50%. It is considered to be critically endangered. The island has three subspecies, each located on different areas of the island. The Northwest Bornean orangutans are the most threatned with around a mere 1,500 individuals remaining. The Northeastern and Central Bornean orangutans have the bigger population, but their are only less than 100,000 total in the world today. ", borneo.x, borneo.y + 30, 200, 200);
+  text("Bornean Orangutan", borneo.x + 10, borneo.y + 10, 200, 200);
+  text("The bornean orangutan is native to Bornea, an Island in southeast Asia. The Bornean orangutan population has said to have declined by more than 50%. It is considered to be critically endangered. The island has three subspecies, each located on different areas of the island. The Northwest Bornean orangutans are the most threatned with around a mere 1,500 individuals remaining. The Northeastern and Central Bornean orangutans have the bigger population, but their are only less than 100,000 total in the world today. ", borneo.x + 10, borneo.y + 30, 220, 220);
 
  }
 
@@ -88,8 +88,8 @@ function mousePressed() {
   fill(0, 127);
   rect(india.x, india.y, 225, 225);
   fill("white");
-  text("Asian Elephant", india.x, india.y + 10, 200, 200);
-  text("The Asian Elephant is one of the most intelligent animals on the planet and is endangered in the wild. Weighing around 11,000 pounds and standing at almost 11.5 feet tall, the Asian Elephant inhabits the forests of India. Today, fewer than 50,000 elephants remain in the wild. It is listed as endangered due to the loss of habitat that is caused by humans destroying the forests that they live in. You can donate to the World Wildlife Fund to help protect this amazing species.", india.x, india.y + 30, 200, 200);
+  text("Asian Elephant", india.x + 10, india.y + 10, 200, 200);
+  text("The Asian Elephant is one of the most intelligent animals on the planet and is endangered in the wild. Weighing around 11,000 pounds and standing at almost 11.5 feet tall, the Asian Elephant inhabits the forests of India. Today, fewer than 50,000 elephants remain in the wild. It is listed as endangered due to the loss of habitat that is caused by humans destroying the forests that they live in. You can donate to the World Wildlife Fund to help protect this amazing species.", india.x + 10, india.y + 30, 220, 220);
 
  }
 
@@ -98,8 +98,8 @@ function mousePressed() {
   fill(0, 127);
   rect(florida.x, florida.y, 235, 235);
   fill("white");
-  text("Florida Panther", florida.x, florida.y + 10, 200, 200);
-  text("The Florida Panther is the only puma species that exists east of the Mississippi. They are considered an endangered species with only around 230 left in existence making them one of the rarest and most endangered animals in the world. They are very common in the southwest tip of Florida. They live in a warm habitat, living in wetlands and swamps like the everglades. You can get involved in helping protect this species by making a donation on the the National Wildlife Federation's website.", florida.x, florida.y + 30, 220, 220);
+  text("Florida Panther", florida.x + 10, florida.y + 10, 200, 200);
+  text("The Florida Panther is the only puma species that exists east of the Mississippi. They are considered an endangered species with only around 230 left in existence making them one of the rarest and most endangered animals in the world. They are very common in the southwest tip of Florida. They live in a warm habitat, living in wetlands and swamps like the everglades. You can get involved in helping protect this species by making a donation on the the National Wildlife Federation's website.", florida.x + 10, florida.y + 30, 220, 220);
 
  }
  if (dist(mouseX, mouseY, carolina.x, carolina.y) < 10) {
@@ -107,8 +107,8 @@ function mousePressed() {
   fill(0, 127);
   rect(carolina.x, carolina.y, 235, 235);
   fill("white");
-  text("Red Wolf", carolina.x, carolina.y + 10, 200, 200);
-  text("The Red wolf is a smaller and thinner cousin of the gray wolf. Then tend to populate the Eastern North Carolina region. They are considered one of the most world's most endangered wolves. They have recorded that only about 200 red wolves remain in the wild. You can adopt a red wolf pack by making a donation at the Endangered Wolf Center online.", carolina.x, carolina.y + 30, 200, 200);
+  text("Red Wolf", carolina.x + 10, carolina.y + 10, 200, 200);
+  text("The Red wolf is a smaller and thinner cousin of the gray wolf. Then tend to populate the Eastern North Carolina region. They are considered one of the most world's most endangered wolves. They have recorded that only about 200 red wolves remain in the wild. You can adopt a red wolf pack by making a donation at the Endangered Wolf Center online.", carolina.x + 10, carolina.y + 30, 200, 200);
 
  }
  if (dist(mouseX, mouseY, california.x, california.y) < 10) {
@@ -116,8 +116,18 @@ function mousePressed() {
   fill(0, 127);
   rect(california.x, california.y, 235, 235);
   fill("white");
-  text("California Condor", california.x, california.y + 10, 200, 200);
-  text("The California Condor is", california.x, california.y + 30, 200, 200);
+  text("California Condor", california.x + 10, california.y + 10, 200, 200);
+  text("The California Condor is the largest bird in North America with very long and broad wings. Their habitat is located along the Pacific beaches and mountain forests in California. It is considered to be crtically endangered with only 500 left in the wild. Want to get involved? You can help scientists learn about condor behavior by getting involved in a citizen science program.", california.x + 10, california.y + 30, 200, 200);
+
+ }
+
+ if (dist(mouseX, mouseY, brasil.x, brasil.y) < 10) {
+  console.log("brasil");
+  fill(0, 127);
+  rect(brasil.x, brasil.y, 235, 235);
+  fill("white");
+  text("Spix Macaw", brasil.x + 10, brasil.y + 10, 200, 200);
+  text("The Spix Macaw", brasil.x + 10, brasil.y + 30, 200, 200);
 
  }
 }
