@@ -1,3 +1,9 @@
+var gorilla;
+
+function preload() {
+ gorilla = loadImage("gorilla.jpg");
+}
+
 // Create a variable to hold our map
 let myMap;
 // Create a variable to hold our canvas
@@ -63,7 +69,8 @@ function mousePressed() {
   rect(nigeria.x, nigeria.y, 200, 200);
   fill("white");
   text("Western Lowland Gorilla", nigeria.x + 10, nigeria.y + 10, 200, 200);
-  text("The western lowland gorilla is the most numerous and widespread of all gorilla subspecies. The height is 4.5 to 5 feet and weigh around 400 pounds. It is considered to be crtically endangered and roam the forest habitat of eastern Africa", nigeria.x + 10, nigeria.y + 30, 200, 200);
+  text("The western lowland gorilla is the most numerous and widespread of all gorilla subspecies. The height is 4.5 to 5 feet and weigh around 400 pounds. It is considered to be crtically endangered and roam the forest habitat of eastern Africa.", nigeria.x + 10, nigeria.y + 30, 200, 200);
+  image(gorilla, 200, 200, gorilla.width / 4, gorilla.height / 4);
 
  }
  if (dist(mouseX, mouseY, china.x, china.y) < 10) {
