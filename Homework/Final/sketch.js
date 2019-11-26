@@ -82,6 +82,44 @@ function mousePressed() {
   text("The bornean orangutan is native to Bornea, an Island in southeast Asia. The Bornean orangutan population has said to have declined by more than 50%. It is considered to be critically endangered. The island has three subspecies, each located on different areas of the island. The Northwest Bornean orangutans are the most threatned with around a mere 1,500 individuals remaining. The Northeastern and Central Bornean orangutans have the bigger population, but their are only less than 100,000 total in the world today. ", borneo.x, borneo.y + 30, 200, 200);
 
  }
+
+ if (dist(mouseX, mouseY, india.x, india.y) < 10) {
+  console.log("india");
+  fill(0, 127);
+  rect(india.x, india.y, 225, 225);
+  fill("white");
+  text("Asian Elephant", india.x, india.y + 10, 200, 200);
+  text("The Asian Elephant is one of the most intelligent animals on the planet and is endangered in the wild. Weighing around 11,000 pounds and standing at almost 11.5 feet tall, the Asian Elephant inhabits the forests of India. Today, fewer than 50,000 elephants remain in the wild. It is listed as endangered due to the loss of habitat that is caused by humans destroying the forests that they live in. You can donate to the World Wildlife Fund to help protect this amazing species.", india.x, india.y + 30, 200, 200);
+
+ }
+
+ if (dist(mouseX, mouseY, florida.x, florida.y) < 10) {
+  console.log("florida");
+  fill(0, 127);
+  rect(florida.x, florida.y, 235, 235);
+  fill("white");
+  text("Florida Panther", florida.x, florida.y + 10, 200, 200);
+  text("The Florida Panther is the only puma species that exists east of the Mississippi. They are considered an endangered species with only around 230 left in existence making them one of the rarest and most endangered animals in the world. They are very common in the southwest tip of Florida. They live in a warm habitat, living in wetlands and swamps like the everglades. You can get involved in helping protect this species by making a donation on the the National Wildlife Federation's website.", florida.x, florida.y + 30, 220, 220);
+
+ }
+ if (dist(mouseX, mouseY, carolina.x, carolina.y) < 10) {
+  console.log("carolina");
+  fill(0, 127);
+  rect(carolina.x, carolina.y, 235, 235);
+  fill("white");
+  text("Red Wolf", carolina.x, carolina.y + 10, 200, 200);
+  text("The Red wolf is a smaller and thinner cousin of the gray wolf. Then tend to populate the Eastern North Carolina region. They are considered one of the most world's most endangered wolves. They have recorded that only about 200 red wolves remain in the wild. You can adopt a red wolf pack by making a donation at the Endangered Wolf Center online.", carolina.x, carolina.y + 30, 200, 200);
+
+ }
+ if (dist(mouseX, mouseY, california.x, california.y) < 10) {
+  console.log("california");
+  fill(0, 127);
+  rect(california.x, california.y, 235, 235);
+  fill("white");
+  text("California Condor", california.x, california.y + 10, 200, 200);
+  text("The California Condor is", california.x, california.y + 30, 200, 200);
+
+ }
 }
 
 function drawPoint() {
