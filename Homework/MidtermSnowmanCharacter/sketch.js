@@ -89,6 +89,17 @@ function setup() {
 
 }
 
+function snowman() {
+ fill(topBall);
+ ellipse(midScreen, 100, topCircle, 100); // top of snowman
+
+ fill(midBall);
+ ellipse(midScreen, midScreen, 150, 150); //middle of snowman
+
+ fill(bottomBall);
+ ellipse(midScreen, 400, 200, 200); //bottom of snowman
+}
+
 function draw() {
  // put drawing code here
  background(255);
@@ -130,14 +141,15 @@ function draw() {
    }
   }
 
-  fill(topBall);
-  ellipse(midScreen, 100, topCircle, 100); // top of snowman
-
-  fill(midBall);
-  ellipse(midScreen, midScreen, 150, 150); //middle of snowman
-
-  fill(bottomBall);
-  ellipse(midScreen, 400, 200, 200); //bottom of snowman
+  snowman();
+  // fill(topBall);
+  // ellipse(midScreen, 100, topCircle, 100); // top of snowman
+  //
+  // fill(midBall);
+  // ellipse(midScreen, midScreen, 150, 150); //middle of snowman
+  //
+  // fill(bottomBall);
+  // ellipse(midScreen, 400, 200, 200); //bottom of snowman
 
  } else {
   console.log("blank");
@@ -166,6 +178,7 @@ function draw() {
 
 
 } //end of drawing
+
 
 function keyPressed() {
 
