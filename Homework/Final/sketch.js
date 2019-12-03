@@ -15,7 +15,7 @@ const mappa = new Mappa('Leaflet');
 const options = {
  lat: 0,
  lng: 0,
- zoom: 4,
+ zoom: 2,
  style: "http://{s}.tile.osm.org/{z}/{x}/{y}.png"
 }
 
@@ -38,6 +38,7 @@ function setup() {
  // put setup code here
  // Create a canvas 640x640
  canvas = createCanvas(880, 880);
+
 
  // Add a grey background
  //background(100);

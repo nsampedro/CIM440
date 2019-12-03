@@ -31,11 +31,24 @@ var snowButton
 
 function setup() {
  // put setup code here
- createCanvas(500, 500);
+ var cnv = createCanvas(500, 500);
+ cnv.id("mycanvas");
 
+ var container0 = createDiv();
+ container0.id("container0");
+
+
+ //.style("css property", "value")
+ select("#container0").style("width", "600px");
+ select("#container0").style("margin", "0 auto");
+
+ cnv.parent("container0");
+
+ select("body").style("background-color", "white");
+ var container1 = createDiv();
 
  seasonSelect = createSelect();
- seasonSelect.position(380, 25);
+ seasonSelect.position(720, 25);
  seasonSelect.option("");
  seasonSelect.option("fall");
  seasonSelect.option("winter");
