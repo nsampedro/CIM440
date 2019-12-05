@@ -1,8 +1,8 @@
 var gorilla;
+var amur;
 
-function preload() {
- gorilla = loadImage("gorilla.jpg");
-}
+
+
 
 // Create a variable to hold our map
 let myMap;
@@ -47,6 +47,9 @@ function setup() {
  myMap = mappa.tileMap(options);
  // Overlay the canvas over the tile map
  myMap.overlay(canvas);
+ canvas.style("width", "900px");
+
+ canvas.style("margin", "0 auto");
  //
  // .addTo(myMap)
  //  .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
@@ -56,6 +59,11 @@ function setup() {
  drawPoint();
  myMap.onChange(drawPoint);
 
+}
+
+function preload() {
+ amur = loadImage("amur.jpg");
+ gorilla = loadImage("gorilla.jpg");
 }
 
 function draw() {
@@ -77,11 +85,11 @@ function mousePressed() {
  if (dist(mouseX, mouseY, china.x, china.y) < 10) {
   console.log("china");
   fill(0, 127);
-  rect(china.x, china.y, 210, 210);
+  rect(china.x, china.y, 310, 310);
   fill("white");
   text("Amur Leopard", china.x + 10, china.y + 10, 200, 200);
   text("The Amur Leopard is located in southeastern Russia close to the border of northern China. It is one of the eight subspecies of leopard and is adapted to a cool climate. The most recent noted population of the Amur Leopard is to be around 100. It is listed as critically endangered. More information can be found at the Wildcats Conservation alliance in regards to history and donations to keep the species around.", china.x + 10, china.y + 30, 200, 200);
-
+  image(amur, china.x + 30, china.y + 30, amur.width / 4, amur.height / 4);
  }
  if (dist(mouseX, mouseY, borneo.x, borneo.y) < 10) {
   console.log("borneo");
