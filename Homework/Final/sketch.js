@@ -1,7 +1,10 @@
 var gorilla;
 var amur;
-
-
+var orangutan;
+var elephant;
+var panther;
+var wolf;
+var condor;
 
 
 // Create a variable to hold our map
@@ -64,6 +67,11 @@ function setup() {
 function preload() {
  amur = loadImage("amur.jpg");
  gorilla = loadImage("gorilla.jpg");
+ orangutan = loadImage("orangutan.jpg");
+ elephant = loadImage("elephant.jpg");
+ panther = loadImage("panther.jpg");
+ wolf = loadImage("wolf.jpg");
+ condor = loadImage("condor.jpg");
 }
 
 function draw() {
@@ -75,68 +83,69 @@ function mousePressed() {
  if (dist(mouseX, mouseY, nigeria.x, nigeria.y) < 10) {
   console.log("nigeria");
   fill(0, 127);
-  rect(nigeria.x, nigeria.y, 200, 200);
+  rect(nigeria.x, nigeria.y, 330, 330);
   fill("white");
   text("Western Lowland Gorilla", nigeria.x + 10, nigeria.y + 10, 200, 200);
   text("The western lowland gorilla is the most numerous and widespread of all gorilla subspecies. The height is 4.5 to 5 feet and weigh around 400 pounds. It is considered to be crtically endangered and roam the forest habitat of eastern Africa.", nigeria.x + 10, nigeria.y + 30, 200, 200);
-  image(gorilla, 200, 200, gorilla.width / 4, gorilla.height / 4);
+  image(gorilla, nigeria.x + 50, nigeria.y + 150, gorilla.width / 4, gorilla.height / 4);
 
  }
  if (dist(mouseX, mouseY, china.x, china.y) < 10) {
   console.log("china");
   fill(0, 127);
-  rect(china.x, china.y, 310, 310);
+  rect(china.x, china.y, 330, 330);
   fill("white");
   text("Amur Leopard", china.x + 10, china.y + 10, 200, 200);
   text("The Amur Leopard is located in southeastern Russia close to the border of northern China. It is one of the eight subspecies of leopard and is adapted to a cool climate. The most recent noted population of the Amur Leopard is to be around 100. It is listed as critically endangered. More information can be found at the Wildcats Conservation alliance in regards to history and donations to keep the species around.", china.x + 10, china.y + 30, 200, 200);
-  image(amur, china.x + 30, china.y + 30, amur.width / 4, amur.height / 4);
+  image(amur, china.x + 150, china.y + 200, amur.width / 4, amur.height / 4);
  }
  if (dist(mouseX, mouseY, borneo.x, borneo.y) < 10) {
   console.log("borneo");
   fill(0, 127);
-  rect(borneo.x, borneo.y, 245, 245);
+  rect(borneo.x, borneo.y, 330, 400);
   fill("white");
   text("Bornean Orangutan", borneo.x + 10, borneo.y + 10, 200, 200);
   text("The bornean orangutan is native to Bornea, an Island in southeast Asia. The Bornean orangutan population has said to have declined by more than 50%. It is considered to be critically endangered. The island has three subspecies, each located on different areas of the island. The Northwest Bornean orangutans are the most threatned with around a mere 1,500 individuals remaining. The Northeastern and Central Bornean orangutans have the bigger population, but their are only less than 100,000 total in the world today. ", borneo.x + 10, borneo.y + 30, 220, 220);
+  image(orangutan, borneo.x + 50, borneo.y + 240, orangutan.width / 4, orangutan.height / 4);
 
  }
 
  if (dist(mouseX, mouseY, india.x, india.y) < 10) {
   console.log("india");
   fill(0, 127);
-  rect(india.x, india.y, 225, 225);
+  rect(india.x, india.y, 320, 400);
   fill("white");
   text("Asian Elephant", india.x + 10, india.y + 10, 200, 200);
   text("The Asian Elephant is one of the most intelligent animals on the planet and is endangered in the wild. Weighing around 11,000 pounds and standing at almost 11.5 feet tall, the Asian Elephant inhabits the forests of India. Today, fewer than 50,000 elephants remain in the wild. It is listed as endangered due to the loss of habitat that is caused by humans destroying the forests that they live in. You can donate to the World Wildlife Fund to help protect this amazing species.", india.x + 10, india.y + 30, 220, 220);
-
+  image(elephant, india.x + 50, india.y + 240, elephant.width / 12, elephant.height / 12);
  }
 
  if (dist(mouseX, mouseY, florida.x, florida.y) < 10) {
   console.log("florida");
   fill(0, 127);
-  rect(florida.x, florida.y, 235, 235);
+  rect(florida.x, florida.y, 330, 380);
   fill("white");
   text("Florida Panther", florida.x + 10, florida.y + 10, 200, 200);
   text("The Florida Panther is the only puma species that exists east of the Mississippi. They are considered an endangered species with only around 230 left in existence making them one of the rarest and most endangered animals in the world. They are very common in the southwest tip of Florida. They live in a warm habitat, living in wetlands and swamps like the everglades. You can get involved in helping protect this species by making a donation on the the National Wildlife Federation's website.", florida.x + 10, florida.y + 30, 220, 220);
-
+  image(panther, florida.x + 50, florida.y + 230, panther.width / 16, panther.height / 16);
  }
  if (dist(mouseX, mouseY, carolina.x, carolina.y) < 10) {
   console.log("carolina");
   fill(0, 127);
-  rect(carolina.x, carolina.y, 235, 235);
+  rect(carolina.x, carolina.y, 330, 330);
   fill("white");
   text("Red Wolf", carolina.x + 10, carolina.y + 10, 200, 200);
   text("The Red wolf is a smaller and thinner cousin of the gray wolf. Then tend to populate the Eastern North Carolina region. They are considered one of the most world's most endangered wolves. They have recorded that only about 200 red wolves remain in the wild. You can adopt a red wolf pack by making a donation at the Endangered Wolf Center online.", carolina.x + 10, carolina.y + 30, 200, 200);
-
+  image(wolf, carolina.x + 80, carolina.y + 200, wolf.width / 3, wolf.height / 3);
  }
  if (dist(mouseX, mouseY, california.x, california.y) < 10) {
   console.log("california");
   fill(0, 127);
-  rect(california.x, california.y, 235, 235);
+  rect(california.x, california.y, 330, 350);
   fill("white");
   text("California Condor", california.x + 10, california.y + 10, 200, 200);
   text("The California Condor is the largest bird in North America with very long and broad wings. Their habitat is located along the Pacific beaches and mountain forests in California. It is considered to be crtically endangered with only 500 left in the wild. Want to get involved? You can help scientists learn about condor behavior by getting involved in a citizen science program.", california.x + 10, california.y + 30, 200, 200);
-
+  image(condor, california.x + 80, california.y + 200, condor.width / 16, condor.height / 16);
  }
 
  if (dist(mouseX, mouseY, brasil.x, brasil.y) < 10) {
