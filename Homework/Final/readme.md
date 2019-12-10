@@ -1,0 +1,3 @@
+The Map of Life
+
+I am making this project to educate people on endangered animals. Many people do not know what animals are endangered until they go extinct. This interactive map will help educate people on the current animals in the world that are considered critically endangered or on the brink of extinction. By using the mappa library I am able to use a map of the world and place dark-grey spots on the map which symbolize the location of an endangered animal. When the user clicks on the hitzone a pop-up will appear and show them the animal that is native to that area, a description on that animal, and a picture.
