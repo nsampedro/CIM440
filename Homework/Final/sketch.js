@@ -5,6 +5,11 @@ var elephant;
 var panther;
 var wolf;
 var condor;
+var macaw;
+var rhino;
+var lynx;
+var bird;
+var whale;
 
 
 // Create a variable to hold our map
@@ -72,6 +77,11 @@ function preload() {
  panther = loadImage("panther.jpg");
  wolf = loadImage("wolf.jpg");
  condor = loadImage("condor.jpg");
+ macaw = loadImage("macaw.jpg");
+ rhino = loadImage("rhino.jpg");
+ lynx = loadImage("lynx.jpg");
+ bird = loadImage("bird.jpg");
+ whale = loadImage("narwhal.jpg");
 }
 
 function draw() {
@@ -151,50 +161,50 @@ function mousePressed() {
  if (dist(mouseX, mouseY, brasil.x, brasil.y) < 10) {
   console.log("brasil");
   fill(0, 127);
-  rect(brasil.x, brasil.y, 235, 235);
+  rect(brasil.x, brasil.y, 330, 340);
   fill("white");
   text("Spix Macaw", brasil.x + 10, brasil.y + 10, 200, 200);
   text("The Spix Macaw, known famously from its portrayal in the animated movie Rio, also known as the Blue Macaw. They inhabit the Amazon forrest in Brazil and are cosnidered to be extremely endangered with only 100 left in captivity. They are said to be extinct in the wild. This is in result of many people illegaly trapping the bird for trading.", brasil.x + 10, brasil.y + 30, 200, 200);
-
+  image(macaw, brasil.x + 80, brasil.y + 180, macaw.width / 6, macaw.height / 6);
  }
 
  if (dist(mouseX, mouseY, zimbabwe.x, zimbabwe.y) < 10) {
   console.log("zimbabwe");
   fill(0, 127);
-  rect(zimbabwe.x, zimbabwe.y, 235, 235);
+  rect(zimbabwe.x, zimbabwe.y, 300, 400);
   fill("white");
   text("Black rhinoceros", zimbabwe.x + 10, zimbabwe.y + 10, 200, 200);
   text("The Black rhinoceros is the smaller of the two prominent African rhino species. They stand around five feet tall and weigh around 2,500 pounds. They are usally found roaming the semi-desert savannah and woodlands. Around 5,500 Black rhinos are still in existence and are classified as a critically endangered species. Wildlife crime plays a big role in the decline of the Black rhino population with poaching and the black-market trafficking of rhino horns.", zimbabwe.x + 10, zimbabwe.y + 30, 215, 215);
-
+  image(rhino, zimbabwe.x + 50, zimbabwe.y + 250, rhino.width / 22, rhino.height / 22);
  }
 
  if (dist(mouseX, mouseY, spain.x, spain.y) < 10) {
   console.log("spain");
   fill(0, 127);
-  rect(spain.x, spain.y, 235, 235);
+  rect(spain.x, spain.y, 330, 355);
   fill("white");
   text("Iberian Lynx", spain.x + 10, spain.y + 10, 200, 200);
   text("The Iberian Lynx is the world's most endangered cat. They are prominent in the south of Spain. In 2002, it was said that there were fewer than 100 left in the wild, but now there are around 400 in existence. Their fragile habitat is under threat from illegal farms and wells along with mining. You can donate at the World Wildlife Foundation's website to help in restoring the Iberian lynx to areas where it used to live.", spain.x + 10, spain.y + 30, 200, 200);
-
+  image(lynx, spain.x + 50, spain.y + 210, lynx.width / 3, lynx.height / 3);
  }
 
  if (dist(mouseX, mouseY, australia.x, australia.y) < 10) {
   console.log("australia");
   fill(0, 127);
-  rect(australia.x, australia.y, 235, 235);
+  rect(australia.x, australia.y, 300, 370);
   fill("white");
   text("Southern Cassowary", australia.x + 10, australia.y + 10, 200, 200);
   text("The Southern Cassowary is one of the many birds that are native to Australia. They are a large, colorful, and flightless bird. It is found in the tropical rainforests of north-east Queensland. The cassowary plays a vital role by excreting the seeds of rainforest plants. They can be as tall as a human being and weigh around 180 pounds. There are currently less than 1,000 birds left in the wild. They are being pushed into extinction due to an increase threat from loss of habitat.", australia.x + 10, australia.y + 30, 210, 210);
-
+  image(bird, australia.x + 50, australia.y + 230, bird.width / 5, bird.height / 5);
  }
  if (dist(mouseX, mouseY, arctic.x, arctic.y) < 10) {
   console.log("arctic");
   fill(0, 127);
-  rect(arctic.x, arctic.y, 235, 235);
+  rect(arctic.x, arctic.y, 330, 360);
   fill("white");
   text("Narwhal ", arctic.x + 10, arctic.y + 10, 200, 200);
   text("The Narwhal is what some people will describe to you as a cross between a whale and a unicorn. They are known for the spiraled tusk that is attached to its head. They live in the ocean habitat of the arctic waters of Greenland and Norway. They can be as long as 14 feet and weigh over 4,000 pounds. They are considered to be endangered due to the decrease in population, which some say is led by the rapid change in climate.", arctic.x + 10, arctic.y + 30, 210, 210);
-
+  image(whale, arctic.x + 50, arctic.y + 220, whale.width / 6, whale.height / 6);
  }
 }
 
