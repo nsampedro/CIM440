@@ -61,7 +61,7 @@
     "nyc": "10.3.2",
     "raw-loader": "0.5.1",
     "rimraf": "2.6.1",
-    "semantic-release": "6.3.6",
+    "semantic-release": "17.2.3",
     "uglify-es": "3.0.28",
     "webpack": "2.6.1",
     "webpack-dev-server": "2.4.5"
